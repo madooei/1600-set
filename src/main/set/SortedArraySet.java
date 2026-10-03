@@ -14,85 +14,44 @@ public class SortedArraySet<T extends Comparable<T>> implements Set<T> {
   // arr only ever holds T, so the cast is safe.
   @SuppressWarnings("unchecked")
   public SortedArraySet() {
-    arr = (T[]) new Comparable[10];  // start with room for 10 items
-    size = 0;                        // the set starts empty
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean contains(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    return indexOf(item) != -1;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean add(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    int i = insertionPoint(item);
-    if (i < size && arr[i].equals(item)) {
-      return false;  // already present; a set holds no duplicates
-    }
-    if (size == arr.length) {
-      grow();        // grow when the array is full
-    }
-    for (int j = size; j > i; j--) {
-      arr[j] = arr[j - 1];  // shift larger items right to open a gap
-    }
-    arr[i] = item;
-    size++;
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean remove(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    int i = indexOf(item);
-    if (i == -1) {
-      return false;  // not present; nothing changed
-    }
-    for (int j = i; j < size - 1; j++) {
-      arr[j] = arr[j + 1];  // shift left to close the gap
-    }
-    arr[size - 1] = null;   // clear the vacated slot
-    size--;
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public int size() {
-    return size;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns the index of item, or -1 if item is not found.
   private int indexOf(T item) {
-    int i = insertionPoint(item);
-    if (i < size && arr[i].equals(item)) {
-      return i;
-    }
-    return -1;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Index where item sits, or where it would belong if absent (binary search).
   private int insertionPoint(T item) {
-    int low = 0;
-    int high = size - 1;
-    while (low <= high) {
-      int mid = low + (high - low) / 2;
-      int cmp = arr[mid].compareTo(item);
-      if (cmp == 0) {
-        return mid;
-      } else if (cmp < 0) {
-        low = mid + 1;
-      } else {
-        high = mid - 1;
-      }
-    }
-    return low;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Doubles the capacity. Same cast rationale as the constructor.

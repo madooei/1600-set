@@ -20,61 +20,31 @@ public class LinkedSet<T> implements Set<T> {
   }
 
   public LinkedSet() {
-    head = null;  // the set starts empty
-    size = 0;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean contains(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    for (Node<T> node = head; node != null; node = node.next) {
-      if (node.value.equals(item)) {
-        return true;
-      }
-    }
-    return false;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean add(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    if (contains(item)) {
-      return false;  // already present; a set holds no duplicates
-    }
-    Node<T> newNode = new Node<>(item);
-    newNode.next = head;  // insert at the head
-    head = newNode;
-    size++;
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean remove(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    Node<T> previous = null;
-    for (Node<T> node = head; node != null; node = node.next) {
-      if (node.value.equals(item)) {
-        if (previous == null) {
-          head = node.next;  // the match was the first node
-        } else {
-          previous.next = node.next;  // unlink the match
-        }
-        size--;
-        return true;
-      }
-      previous = node;
-    }
-    return false;  // not found; nothing changed
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public int size() {
-    return size;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

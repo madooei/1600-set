@@ -20,74 +20,37 @@ public class MoveToFrontLinkedSet<T> implements Set<T> {
   }
 
   public MoveToFrontLinkedSet() {
-    head = null;  // the set starts empty
-    size = 0;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean contains(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    Node<T> previous = null;
-    for (Node<T> node = head; node != null; node = node.next) {
-      if (node.value.equals(item)) {
-        moveToFront(node, previous);
-        return true;
-      }
-      previous = node;
-    }
-    return false;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean add(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    if (contains(item)) {
-      return false;  // already present; a set holds no duplicates
-    }
-    Node<T> newNode = new Node<>(item);
-    newNode.next = head;  // insert at the head
-    head = newNode;
-    size++;
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean remove(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    Node<T> previous = null;
-    for (Node<T> node = head; node != null; node = node.next) {
-      if (node.value.equals(item)) {
-        if (previous == null) {
-          head = node.next;  // the match was the first node
-        } else {
-          previous.next = node.next;  // unlink the match
-        }
-        size--;
-        return true;
-      }
-      previous = node;
-    }
-    return false;  // not found; nothing changed
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public int size() {
-    return size;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Pre: previous is the node before node, or null when node is the head.
   private void moveToFront(Node<T> node, Node<T> previous) {
-    if (previous == null) {
-      return;               // already at the front; nothing to do
-    }
-    previous.next = node.next;  // unlink the node from its current spot
-    node.next = head;           // splice it in at the head
-    head = node;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 }

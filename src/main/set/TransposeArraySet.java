@@ -13,71 +13,38 @@ public class TransposeArraySet<T> implements Set<T> {
   // arr only ever holds T, so the cast is safe.
   @SuppressWarnings("unchecked")
   public TransposeArraySet() {
-    arr = (T[]) new Object[10];  // start with room for 10 items
-    size = 0;                    // the set starts empty
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean contains(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    int i = indexOf(item);
-    if (i == -1) {
-      return false;
-    }
-    if (i > 0) {
-      T temp = arr[i];
-      arr[i] = arr[i - 1];
-      arr[i - 1] = temp;  // swap the found item one step toward the front
-    }
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean add(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    if (indexOf(item) != -1) {
-      return false;    // already present; a set holds no duplicates
-    }
-    if (size == arr.length) {
-      grow();          // grow when the array is full
-    }
-    arr[size] = item;  // append at the end
-    size++;
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public boolean remove(T item) {
-    if (item == null) {
-      throw new IllegalArgumentException();
-    }
-    int i = indexOf(item);
-    if (i == -1) {
-      return false;          // not present; nothing changed
-    }
-    arr[i] = arr[size - 1];  // move the last item into the gap
-    arr[size - 1] = null;    // clear the vacated slot
-    size--;
-    return true;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   @Override
   public int size() {
-    return size;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Returns the index of item, or -1 if item is not found.
   private int indexOf(T item) {
-    for (int i = 0; i < size; i++) {
-      if (arr[i].equals(item)) {
-        return i;
-      }
-    }
-    return -1;
+    // TODO: Implement me
+    throw new UnsupportedOperationException("TODO: Implement me");
   }
 
   // Doubles the capacity. Same cast rationale as the constructor.
