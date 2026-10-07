@@ -48,7 +48,8 @@ public class MoveToFrontLinkedSet<T> implements Set<T> {
     throw new UnsupportedOperationException("TODO: Implement me");
   }
 
-  // Pre: previous is the node before node, or null when node is the head.
+  // Moves node to the head of the list. previous is the node before it,
+  // or null if node is already the head.
   private void moveToFront(Node<T> node, Node<T> previous) {
     // TODO: Implement me
     throw new UnsupportedOperationException("TODO: Implement me");
