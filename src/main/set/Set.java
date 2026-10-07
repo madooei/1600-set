@@ -1,7 +1,7 @@
 package set;
 
 /**
- * A Set is a collection of distinct elements, with no duplicates and no order.
+ * A Set is a collection of distinct elements, with no order.
  *
  * @param <T> the type of elements in this set.
  */
