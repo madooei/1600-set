@@ -49,7 +49,7 @@ code/
 - `scripts/test.sh set.ArraySetTest` — compiles everything and runs only that test class. Use this while you are working on one class and the others are still empty.
 - `scripts/run.sh demo.ArraySetDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
-## What's here
+## Contents
 
 - `set.Set<T>` — the Set contract: `add`, `remove`, `contains`, and `size`.
 - `set.LinkedSet<T>` — the node-backed implementation, which adds new items at the head of the list.
