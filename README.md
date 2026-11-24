@@ -24,7 +24,12 @@ code/
         MoveToFrontLinkedSet.java       # LinkedSet with the move-to-front heuristic
         TransposeArraySet.java          # ArraySet with the transpose heuristic
         SortedArraySet.java             # sorted-array Set
-        Main.java                       # demo entry point (the username example)
+      demo/                             # one demo per implementation
+        LinkedSetDemo.java
+        ArraySetDemo.java
+        MoveToFrontLinkedSetDemo.java
+        TransposeArraySetDemo.java
+        SortedArraySetDemo.java
     test/
       set/
         SetTest.java                    # abstract: the Set contract suite
@@ -34,7 +39,7 @@ code/
         TransposeArraySetTest.java      # runs the suite against TransposeArraySet
         SortedArraySetTest.java         # runs the suite against SortedArraySet
   scripts/
-    run.sh                              # compile and run the Set demo (set.Main)
+    run.sh                              # compile and run one demo
     test.sh                             # compile and run every JUnit test
 ```
 
@@ -42,7 +47,7 @@ code/
 
 - `scripts/test.sh` — compiles everything and runs the full JUnit suite.
 - `scripts/test.sh set.ArraySetTest` — compiles everything and runs only that test class. Use this while you are working on one class and the others are still empty.
-- `scripts/run.sh` — compiles everything and runs the `Main` demo.
+- `scripts/run.sh demo.ArraySetDemo` — compiles everything and runs that one demo. Every class you implement has its own demo, `<Class>Demo`.
 
 ## What's here
 
@@ -52,9 +57,9 @@ code/
 - `set.MoveToFrontLinkedSet<T>` — a `LinkedSet` whose `contains` moves the item it finds to the head of the list.
 - `set.TransposeArraySet<T>` — an `ArraySet` whose `contains` swaps the item it finds one slot toward the front.
 - `set.SortedArraySet<T>` — the sorted-array implementation, whose `contains` uses binary search. The element type must be `Comparable`.
-- `set.Main` — a runnable demo of the username example, run on all five implementations.
 - `set.SetTest` — the abstract contract suite. It checks only `contains` and `size`, because a set has no order to check.
 - `set.LinkedSetTest`, `set.ArraySetTest`, `set.MoveToFrontLinkedSetTest`, `set.TransposeArraySetTest`, `set.SortedArraySetTest` — each runs the contract suite against one implementation.
+- `demo.LinkedSetDemo`, `demo.ArraySetDemo`, `demo.MoveToFrontLinkedSetDemo`, `demo.TransposeArraySetDemo`, and `demo.SortedArraySetDemo` — one demo per implementation, each on the username example.
 
 ## The heuristic classes
 
